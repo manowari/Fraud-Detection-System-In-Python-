@@ -53,5 +53,7 @@ Various models need different libraries [check out the list here](official_docs/
 ### Data Analysis 
 For data analysis, check the [data analysis and preparation page](data_analysis_notes/full_data_analysis.md)
 
+**Main Functions**
+I have a main module where you can run some already precompiled method and and more :-)
 
 
