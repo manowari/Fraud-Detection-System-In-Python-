@@ -7,14 +7,10 @@ python -m venv venv
 then 
 ```
 ```
-venv\Scripts\activate
+venv/Scripts/activate
 ```
 
 This creates a `/venv ` folder 
-
-
-
-
 
 
 
@@ -39,9 +35,23 @@ This creates a `/venv ` folder
 
 ### Setup a Git
 
+
+` git checkout -b master `
+
+`git add . `
+
 `git remote add origin <remote_repository_url>`
 
+- Commmit and push 
 
+
+
+### Installing Libraries 
+
+Various models need different libraries [check out the list here](official_docs/installations.md )
+
+### Data Analysis 
+For data analysis, check the [data analysis and preparation page](data_analysis_notes/full_data_analysis.md)
 
 
 

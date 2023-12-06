@@ -1,0 +1,3 @@
+# Ignore specific files within the src/app directory
+
+src/data/raw_data_files/creditcard.csv
