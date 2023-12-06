@@ -56,6 +56,7 @@ For data analysis, check the [data analysis and preparation page](data_analysis_
 **Main Functions**
 I have a main module where you can run some already precompiled method and and more :-)
 
-You can check the procedures  I have used in my main
+You can check the procedures  I have used in my [main file](data_analysis_notes/main_function_process.md)
+
 
 

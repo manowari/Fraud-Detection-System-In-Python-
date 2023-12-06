@@ -1,0 +1,3 @@
+- Start by pointing to your csv and extracting a pandas dataframe
+- do a simple analysis checking if there are empty columns and also get a summary of the csv
+- Do a time series analysis 
