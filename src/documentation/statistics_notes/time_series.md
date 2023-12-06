@@ -54,3 +54,50 @@ print(fraudulent_transactions)
 ```
 
 In this example, transactions with residuals (the difference between actual and predicted values) exceeding a certain threshold are flagged as potentially fraudulent. Adjust the threshold based on the characteristics of your data and the results of your analysis.
+
+**More Notes**
+
+Certainly! Let's break down the code and explain each part:
+
+### `time_series.py`:
+This file contains a function for plotting the moving average of a time series.
+
+- **plot_moving_average(series, window, plot_intervals=False, scale=1.96):**
+  - `series`: The time series data.
+  - `window`: The size of the moving average window.
+  - `plot_intervals`: Whether to plot confidence intervals (default is `False`).
+  - `scale`: The scale factor for calculating confidence intervals (default is 1.96, which corresponds to a 95% confidence level).
+
+### `arima_model.py`:
+This file contains a function for fitting an ARIMA model to a time series.
+
+- **fit_ARIMA(series, order):**
+  - `series`: The time series data.
+  - `order`: The order of the ARIMA model, specified as `(p, d, q)`, where `p` is the autoregressive order, `d` is the differencing order, and `q` is the moving average order.
+
+### `exponential_smoothing.py`:
+This file contains a function for fitting an exponential smoothing model to a time series.
+
+- **fit_exponential_smoothing(series, seasonal=None):**
+  - `series`: The time series data.
+  - `seasonal`: Whether the series has a seasonal component (default is `None`).
+
+### `main.py`:
+This is the main script that utilizes the functions defined in the other files.
+
+- **Loading Data:**
+  - It loads a time series dataset from a CSV file, assumes a 'timestamp' column, and sets it as the index.
+
+- **Standardization:**
+  - It uses the `StandardScaler` from scikit-learn to standardize the 'amount' column, storing the result in a new column named 'amount_scaled'.
+
+- **Moving Average:**
+  - It plots the moving average of the standardized 'amount' column using the function from `time_series.py`.
+
+- **ARIMA:**
+  - It fits an ARIMA model to the standardized 'amount' column using the function from `arima_model.py`. The chosen order `(1, 1, 1)` is an example; you may need to tune it based on your data.
+
+- **Exponential Smoothing:**
+  - It fits an exponential smoothing model to the standardized 'amount' column using the function from `exponential_smoothing.py`.
+
+By organizing the code in this way, you can easily extend or modify each part independently, making your code more modular and maintainable. Additionally, comments and docstrings in the code help explain the purpose of each function and its parameters.
