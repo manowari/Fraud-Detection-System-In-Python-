@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import numpy as np
 
 def split_csv_and_retain_first_half(input_file, output_file_first_half):
     """
@@ -54,3 +55,39 @@ delete_files_by_name(root_directory, file_to_delete)
 def normalize_windows_path(path):
     normalized_path = os.path.normpath(path)
     return normalized_path
+
+
+
+def join_paths(*paths):
+
+    joined_path = os.path.join(*paths)
+    joined_path = normalize_windows_path(joined_path)
+    return joined_path
+
+def categorize_columns(df):
+    
+    
+    numerical_columns = []
+    categorical_columns = []
+    other_columns = []
+
+    for column, data_type in df.dtypes.items():
+        if pd.api.types.is_numeric_dtype(data_type):
+            numerical_columns.append(column)
+        elif pd.api.types.is_categorical_dtype(data_type):
+            categorical_columns.append(column)
+        else:
+            other_columns.append(column)
+
+    return numerical_columns, categorical_columns, other_columns
+
+
+def columns_with_full_data(df):
+    '''Columns with full data'''
+    
+    full_data_columns = []
+    for column in df.columns:
+        if df[column].notnull().all() and (df[column] != "").all():
+            full_data_columns.append(column)
+    return full_data_columns
+
