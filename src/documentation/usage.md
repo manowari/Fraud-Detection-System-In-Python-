@@ -58,5 +58,7 @@ I have a main module where you can run some already precompiled method and and m
 
 You can check the procedures  I have used in my [main file](data_analysis_notes/main_function_process.md)
 
+The data used is publicly available on [Kaggle, including their own documentation ](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+
 
 

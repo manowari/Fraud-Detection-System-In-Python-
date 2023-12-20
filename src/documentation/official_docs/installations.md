@@ -73,4 +73,6 @@ pip install numpy pandas matplotlib scikit-learn tensorflow networkx nltk statsm
 Keep in mind that the actual packages you need might vary based on the specific implementation and requirements of your fraud detection system. Always refer to the documentation of each package for detailed information and updates.
 
 
+## **Offficial Documentation**
+
 Additionally you can check a [comprehensive list of official docs on this page]( official_packages_links.md)
